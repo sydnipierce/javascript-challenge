@@ -22,15 +22,13 @@ function TableFilter() {
 
     table.html("");
 
-    tableData.filter() {
+    var tableFilter = tableData.filter(sighting => sighting.datetime === input);
 
-    };
-
-    tableData.forEach(function(sighting) {
+    tableFilter.forEach(function(sighting) {
         var row = table.append("tr");
         Object.entries(sighting).forEach(function([key, value]) {
           var cell = row.append("td");
           cell.text(value);
         });
       });
-}
+};
