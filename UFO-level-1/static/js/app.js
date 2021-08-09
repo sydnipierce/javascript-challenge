@@ -16,7 +16,7 @@ function TableFilter() {
 
     var fieldValue = field.property("value");
 
-    //table.html("");
+    table.html("");
 
     var tableFilter = tableData.filter(sighting => sighting.datetime == fieldValue);
 
