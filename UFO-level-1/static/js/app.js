@@ -19,11 +19,8 @@ function TableFilter() {
     table.html("")
 
     tableData.forEach(function(sighting) {
-        var row = tbody.append("tr");
-        Object.entries(weatherReport).forEach(function([key, value]) {
-          console.log(key, value);
-          // Append a cell to the row for each value
-          // in the weather report object
+        var row = table.append("tr");
+        Object.entries(sighting).forEach(function([key, value]) {
           var cell = row.append("td");
           cell.text(value);
         });
