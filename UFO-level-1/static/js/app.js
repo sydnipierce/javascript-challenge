@@ -6,6 +6,16 @@ var button = d3.select("#filter-btn");
 
 var form = d3.select("form");
 
+var table = d3.select("tbody");
+
+tableData.forEach(function(sighting) {
+  var row = table.append("tr");
+  Object.entries(sighting).forEach(function([key, value]) {
+    var cell = row.append("td");
+    cell.text(value);
+  });
+});
+
 // create function to filter the table results
 function TableFilter() {
     d3.event.preventDefault();
